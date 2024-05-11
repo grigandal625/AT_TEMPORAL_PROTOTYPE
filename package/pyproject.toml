@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "at-temporal-prototype"
+version = "0.1.0"
+description = ""
+authors = ["grigadnal625 <grigandal625@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+at-queue = {git = "https://github.com/grigandal625/AT_QUEUE.git", rev = "master"}
+at-solver = {git = "https://github.com/grigandal625/AT_SOLVER.git", rev = "master"}
+at-temporal-solver = {git = "https://github.com/grigandal625/AT_TEMPORAL_SOLVER.git", rev = "master"}
+at-simulation-mocking = {git = "https://github.com/grigandal625/AT_SIMULATION_MOCKING.git", rev = "master"}
+at-blackboard = {git = "https://github.com/grigandal625/AT_BLACKBOARD.git", rev = "master"}
+at-joint = {git = "https://github.com/grigandal625/AT_JOINT.git", rev = "master"}
+at-configurator = {git = "https://github.com/grigandal625/AT_CONFIGURATOR.git", rev = "master"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

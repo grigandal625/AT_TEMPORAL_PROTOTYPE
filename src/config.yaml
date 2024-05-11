@@ -1,0 +1,13 @@
+auth_token: default
+config:
+  ATSolver:
+    kb:
+      path: /src/knowledge_base.xml
+  ATTemporalSolver:
+    kb:
+      path: /src/knowledge_base.xml
+  ATSimulationMocking:
+    sm_run:
+      path: /src/sm_run.xml
+  ATJoint:
+    at_simulation: ATSimulationMocking
