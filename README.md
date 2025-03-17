@@ -31,20 +31,20 @@ auth_token: default
 config:
   ATSolver: # конфигурация АТ-РЕШАТЕЛЯ
     kb:
-      path: /src/knowledge_base.xml # Файл БЗ
+      path: /src/TrafficAccidentsKB.kbs # Файл БЗ
   ATTemporalSolver: # конфигурация темпорального решателя
     kb:
-      path: /src/knowledge_base.xml # Файл БЗ
+      path: /src/TrafficAccidentsKB.kbs # Файл БЗ
   ATSimulationMocking: # конфигурация заглушки подсистемы ИМ
     sm_run:
-      path: /src/sm_run.xml # файл прогона ИМ
+      path: /src/ResourceParameters.xml # файл прогона ИМ
   ATJoint: # конфигурация компонента поддержки совместного функционирования
     at_simulation: ATSimulationMocking # имя компонента для отправки сообщений, предназначенных подсистеме ИМ (по умолчанию ATSimulation)
 ```
 
 Обратите внимание, что для файлов указан абсолютный путь формата `/src/*`, поскольку для docker-контейнеров будет смонтирован том (volume) из папки [./src/](./src/) в папку `/src/` (см. [compose.yaml](./compose.yaml) строки 7-8)
 
-Текущая тестовая база знаний в формате .xml находится здесь - [src/knowledge_base.xml](./src/knowledge_base.xml). Можно также указать файл БЗ в формате .json и .kbs (расширенный ЯПЗ), однако для больших БЗ считывание из формата расширенного ЯПЗ может занять очень длительное время.
+Текущая тестовая база знаний в формате расширенного ЯПЗ находится здесь - [src/TrafficAccidentsKB.kbs](./src/knowledge_base.xml). Можно также указать файл БЗ в формате .json и xml.
 
 Для того, чтобы попробовать совместное функционирование со своими файлами прогона модели и БЗ, необходимо:
 

@@ -2,12 +2,13 @@ auth_token: default
 config:
   ATSolver:
     kb:
-      path: /src/knowledge_base.xml
+      path: /src/TrafficAccidentsKB.kbs
   ATTemporalSolver:
     kb:
-      path: /src/knowledge_base.xml
+      path: /src/TrafficAccidentsKB.kbs
   ATSimulationMocking:
     sm_run:
-      path: /src/sm_run.xml
+      path: /src/ResourceParameters.xml
   ATJoint:
     at_simulation: ATSimulationMocking
+    at_simulation_file: 1

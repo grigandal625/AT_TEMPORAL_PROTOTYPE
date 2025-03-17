@@ -25,7 +25,6 @@ services:
 
   queue:
     <<: *prototype
-    container_name: queue
     command: poetry run python -m at_queue -H rabbit
     depends_on:
       rabbit:
@@ -103,7 +102,6 @@ services:
     
   configurator:
     <<: *prototype
-    container_name: configurator
     command: poetry run python -m at_configurator -H rabbit -c /src/config.yaml
     depends_on:
       solver:
